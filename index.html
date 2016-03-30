@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <title> Event Guest Attendance </title>
+  <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body bgcolor= "#BEE3DB">
+  <nav id="navbar-material" class="navbar-material teal lighten-5" role="navigation">
+    <div class="nav-wrapper container">
+      <div>
+        <a id="logo-container" href="#" class="brand-logo">Events</a>
+      </div>
+      <ul class="right hide-on-med-and-down">
+		<li><a href="#contact" class="arctic_scroll" data-offset="-50">Contact Us</a></li>
+      </ul>
+	  <ul class="right hide-on-med-and-down">
+        <li><a href="#list" class="arctic_scroll" data-offset="-50">See List</a></li>
+      </ul>
+	  <ul class="right hide-on-med-and-down">
+        <li><a href="#attend" class="arctic_scroll" data-offset="-50">Attendance</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center">Event Guest Attendance</h1>
+        <div class="row center">
+          <h4 class="header col s12">Takes attendance as easy as one, two, three!</h4>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="event2.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+  
+  <div id="attend" class="container">
+    <div class="section">
+      <div class="row">
+        <div class="col s12 center">
+          <h3 class="center brown-text"><i class="medium material-icons teal-text text-lighten-2">person_pin</i></h3>
+          <h3>Attendance</h3>
+        </div>
+      </div>
+	  
+  	<div class="container col s6 offset-s3">
+  	   <div class="card teal lighten-2">
+  	      <div class="card-content white-text">
+            <div class="row">
+              <div id="attendance" class="col s12">
+                <div class="row">
+                  <form class="col s12 m12 l12">
+                    <div class="row">
+                      <div class="input-field col s12 m12 l12 valign">
+                        <input id="name" type="text" class="validate"/>
+                        <label for="name">Name</label>
+                      </div>
+                    </div>
+					<div class="row">
+                      <div class="input-field col s12 m12 l12 valign">
+                        <input id="organization" type="text" class="validate"/>
+                        <label for="organization">Organization</label>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="input-field col s12 m12 l12 valign">
+                        <input id="contactNumber" type="text" class="validate"/>
+                        <label for="contactNumber">Contact Number</label>
+                      </div>
+                    </div>
+                    <div class="center">
+                      <a href="#submit" id="submit-button" class="btn-large waves-effect waves-light blue-grey lighten-1 white-text">Submit</a>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+  	    </div>
+  	  </div>
+  	</div>
+    </div>
+  </div>
+  
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+    </div>
+    <div class="parallax"><img src="event1.jpg" alt="Unsplashed background img 2"></div>
+  </div>
+
+   <div id="list" class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <h3 class="center brown-text"><i class="medium material-icons teal-text text-lighten-2">assignment</i></h3>
+          <h3>List of Attendees</h3>
+          <div class="row" id="output">
+                <div id='messagesDiv'>
+                    <table class="table table-condensed striped " id='addressTable'>
+                        <thead>
+                            <tr>
+                                <th> <i class="material-icons">perm_identity</i> Name </th>
+                                <th> <i class="material-icons">supervisor_account</i> Organization </th>
+                                <th> <i class="material-icons">call</i> Contact Number </th>
+                            </tr>
+                        </thead>
+                        <tbody id="table" style="overflow-y:auto;">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="parallax-container valign-wrapper">
+    <div class="section no-pad-bot">
+      <div class="container">
+      </div>
+    </div>
+    <div class="parallax"><img src="event3.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <footer class="page-footer teal lighten-5">
+    <div id="contact" class="container teal lighten-5">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5>CMSC 128 AB-7L</h5>
+          <p>Created by Mark Wency Yambao using Materialize.</p>
+        </div>
+        <div class="col l3 s12">
+          <h5>Contact me:</h5>
+          <ul>
+            <li><a class="blue-grey-text text-darken-3" href="https://www.facebook.com/wency555">Facebook</a></li>
+            <li><a class="blue-grey-text text-darken-3" href="https://twitter.com/Wency_Stinson">Twitter</a></li>
+            <li><a class="blue-grey-text text-darken-3" href="mpyambao@up.edu.ph">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright teal lighten-5">
+      <div class="container">
+		 <p>All Rights Reserved 2016</p>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/jquery.arctic_scroll.js"></script>
+  <script>
+  //codes are lifted from the firebase tutorial
+  var myDataRef = new Firebase('https://sru28i0e5tj.firebaseio-demo.com/');
+	$('#submit-button').on('click', function () { //add data to database, but employ checks first
+		//to check fields if blank
+		if($('#name').val() === "" || $('#organization').val() === "" || $('#contactNumber').val()=== ""){
+			alert("Please answer all fields.");
+		}else if(!/^([0-9/+/-])*$/.test($('#contactNumber').val())){ 		//to check if the contact field is valid
+			alert("Please input valid contact number.");
+		}else{	//pushes the values
+			var name = $('#name').val();
+			var organization = $('#organization').val();
+			var contact = $('#contactNumber').val();
+			myDataRef.push({name: name, organization: organization, contact: contact});
+			alert("Data is saved!");	
+		}
+	});
+	myDataRef.on('child_added', function(snapshot) {
+		var message = snapshot.val();
+		displayAttendance(message.name, message.organization, message.contact);
+	});
+	function displayAttendance(name, organization, contact) { //this will display the data in a table
+		$('#table').prepend('<tr><td>'+name+'</td><td>'+organization+'</td><td>'+contact+'</td></tr>');
+		$('#messagesDiv')[0].scrollTop = $('#messagesDiv')[0].scrollHeight;
+	};
+  
+  $(function(){
+    $(".arctic_scroll").arctic_scroll({
+        speed: 800
+    });
+  });
+  $(document).ready(function(){
+	$('.parallax').parallax();
+  });
+  $(document).ready(function(){
+    $('.navbar-material').pushpin({ top: $('.navbar-material').offset().top });
+  });
+  </script>
+  </body>
+</html>
